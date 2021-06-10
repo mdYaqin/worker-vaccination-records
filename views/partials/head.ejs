@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Worker Vaccination Record</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <div class="container-fluid">
+            <% if (user) { %>
+                <a class="navbar-brand" href="/workers">Home</a>
+                <% } %>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+
+
+                            <li class="nav-link active" aria-current="page">Worker Vaccination Record</li>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="d-flex navbar-nav">
+
+                        <% if (user) { %>
+                            <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                            <form method="POST" action="/logout">
+                                <button type="submit" class="btn btn-link nav-link">Logout</button>
+                            </form>
+
+                            <li class="nav-item"><a class="nav-link" href="/workers/new">Add worker</a></li>
+
+                            <% } else { %>
+
+                                <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/">Login</a></li>
+                                <li class="nav-item">
+
+                                    <% } %>
+
+                    </ul>
+                    <% if (user) { %>
+                        <form class="d-flex" method="POST" action="/workers/searchResult">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="query" name="query">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <% } %>
+        </div>
+        </div>
+    </nav>

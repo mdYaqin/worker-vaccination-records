@@ -1,0 +1,53 @@
+<%- include('../partials/head') %>
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class="col-3 offset-2">
+
+                <div class="card">
+                    <img src="<%= worker.image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= worker.name %>
+                        </h5>
+                        <p class="card-text">
+                            <%= worker.address %>
+                        </p>
+                        <p class="card-text">
+                            <%= worker.contact %>
+                        </p>
+                        <p class="card-text">
+                            <%= worker.status %>
+                        </p>
+
+
+                        <div class="btn-group">
+                            <% if (user) { %>
+                                <a href="/workers/<%=   worker.slug %>/edit " class="btn btn-primary">Edit</a>
+                                <form method="post" action="/workers/<%=   worker.slug %>?_method=DELETE">
+                                    <button type="submit" class="btn btn-danger">Delete</a>
+                                   <% } %> 
+                              </form>
+                       </div>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+
+     
+
+             </div>
+    
+
+
+
+
+
+
+<%- include('../partials/foot') %>

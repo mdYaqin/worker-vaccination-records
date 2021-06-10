@@ -1,0 +1,44 @@
+<%- include('../partials/head') %>
+
+
+
+    <div class="container">
+
+        <form method="POST" action="/workers/<%= worker.slug %>?_method=PATCH">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= worker.name %> ">
+                <div id="name" class="form-text">*Please input your name as per NRIC</div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="image" name="image" value="<%= worker.image %> ">>
+                <label class="input-group-text" for="inputGroupFile02">Upload image</label>
+
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" name="address" value="<%= worker.address %> ">
+            </div>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact</label>
+                <input type="text" class="form-control" id="contact" name="contact" value="<%= worker.contact %> ">
+            </div>
+
+
+            <div class="radio">
+                <input type="radio" id="vaccinated" name="status" value="vaccinated" checked>
+                <label for="male">Vaccinated</label><br>
+                <input type="radio" id="not-vaccinated" name="status" value="not-vaccinated">
+                <label for="female">Not Vaccinated</label><br>
+            </div>
+            <br>
+
+
+
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+
+    </div>
+
+
+    <%- include('../partials/foot') %>
