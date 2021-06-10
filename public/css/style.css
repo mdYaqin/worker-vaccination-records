@@ -33,7 +33,8 @@ section .section-title {
     background: #ffffff;
 }
 
-.image-flip:hover .backside,
+
+/* .image-flip:hover .backside,
 .image-flip.hover .backside {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -49,7 +50,7 @@ section .section-title {
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
-}
+} */
 
 .mainflip {
     -webkit-transition: 1s;
