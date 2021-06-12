@@ -126,3 +126,7 @@ section .section-title {
     height: 120px;
     border-radius: 50%;
 }
+
+.profile-img {
+    margin-right: 10px;
+}

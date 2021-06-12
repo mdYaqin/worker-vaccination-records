@@ -8,6 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="css/style.css" rel="stylesheet">
 
     <title>Worker Vaccination Record</title>
@@ -15,12 +17,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-7">
         <div class="container-fluid">
             <% if (user) { %>
-                <a class="navbar-brand" href="/workers">Home</a>
+                <a class="navbar-brand primary btn-outline-success" href="/workers">Home</a>
                 <% } %>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler " type="button " data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,7 +30,7 @@
                             <li class="nav-item">
 
 
-                                <li class="nav-link active" aria-current="page">Worker Vaccination Record</li>
+                                <li class="navbar-brand text-dark" aria-current="page">Worker Vaccination Record</li>
 
                             </li>
                         </ul>
@@ -37,7 +39,7 @@
                     <ul class="d-flex navbar-nav">
 
                         <% if (user) { %>
-                            <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li> -->
                             <form method="POST" action="/logout">
                                 <button type="submit" class="btn btn-link nav-link">Logout</button>
                             </form>
