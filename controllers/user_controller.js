@@ -19,12 +19,14 @@ module.exports = {
     registerUser: async(req, res) => {
         // validate first & last name
         if (!req.body.first_name || !req.body.last_name) {
+            console.log(1)
             res.redirect("/register");
             return;
         }
 
         // ensure password and confirm password matches
         if (req.body.password !== req.body.password_confirm) {
+            console.log(2)
             res.redirect("/register");
             return;
         }
@@ -34,11 +36,12 @@ module.exports = {
         try {
             user = await UserModel.findOne({ email: req.body.email });
         } catch (err) {
-            console.log(err);
+            console.log(3);
             res.redirect("/register");
             return;
         }
         if (user) {
+            console.log(4)
             res.redirect("/register");
             return;
         }
@@ -53,6 +56,9 @@ module.exports = {
 
         // hashing using bcrypt
         const generatedHash = await bcrypt.hash(req.body.password, saltRounds);
+        let email = "",
+            hash = ""
+
 
         try {
             await UserModel.create({
@@ -66,12 +72,13 @@ module.exports = {
                 updated_at: timestampNow,
             });
         } catch (err) {
-            console.log(err);
+            console.log(5);
             res.redirect("/register");
             return;
         }
+        console.log(6)
+        res.redirect("/workers");
 
-        res.redirect("/dashboard");
         return;
     },
 

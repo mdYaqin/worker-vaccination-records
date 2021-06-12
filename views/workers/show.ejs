@@ -29,12 +29,12 @@
 
                         <div class="btn-group">
                             <% if (user) { %>
-                                <a href="/workers/<%=   worker.slug %>/edit " class="btn border-shadow update">
+                                <a href="/workers/<%=   worker.slug %>/edit " class="btn border-shadow update btn-outline-success">
                                     <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                                 </a>
                                 <form method="post" action="/workers/<%=   worker.slug %>?_method=DELETE">
 
-                                    <button type="submit" class="btn border-shadow">
+                                    <button type="submit" class="btn border-shadow btn-outline-danger">
                                         <span class="text-gradient"><i class="fas fa-times"></i></span>
                                     </a>
                                    <% } %> 
