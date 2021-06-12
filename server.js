@@ -42,7 +42,6 @@ app.use(
 );
 
 app.use(flash({ sessionKeyName: "flash_message" }));
-
 //setting middleware to ensure global template user variable
 app.use(setUserVarMiddleware);
 
