@@ -11,6 +11,7 @@ This app was created to ensure ease of record keeping by company to monitor thei
 - HTML
 - CSS
 - Javascript
-- React JS
+- NodeJs
+- Express
 - Bootstrap
 
