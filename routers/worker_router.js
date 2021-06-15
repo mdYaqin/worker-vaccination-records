@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const workersController = require("../controllers/workers_controller");
 const {
-  authenticatedOnly: authenticatedOnlyMiddleware,
-  guestOnly: guestOnlyMiddleware,
+    authenticatedOnly: authenticatedOnlyMiddleware,
+    guestOnly: guestOnlyMiddleware,
 } = require("../middlewares/auth-middleware");
 
 //show only vaciinated

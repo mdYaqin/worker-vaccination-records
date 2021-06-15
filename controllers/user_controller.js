@@ -56,9 +56,6 @@ module.exports = {
 
         // hashing using bcrypt
         const generatedHash = await bcrypt.hash(req.body.password, saltRounds);
-        let email = "",
-            hash = ""
-
 
         try {
             await UserModel.create({

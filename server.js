@@ -21,6 +21,7 @@ mongoose.set("useCreateIndex", true);
 //set the view engine that express will use
 app.set("view engine", "ejs");
 
+//Load CSS
 app.use(express.static("public"));
 
 //setting middleware to accept json and url encoded request body
@@ -48,10 +49,13 @@ app.use(setUserVarMiddleware);
 // =======================================
 //              ROUTES
 // =======================================
+
+//workers
 app.use("/workers", workersRouter);
 
 //users
 app.use("/", usersRouter);
+
 
 // =======================================
 //              LISTENER
