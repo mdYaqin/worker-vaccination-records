@@ -8,7 +8,7 @@ This app was created to ensure ease of record keeping by company to monitor work
 
 
 ## Tech Stacks
-- HTML
+- EJS
 - CSS
 - Javascript
 - NodeJs
