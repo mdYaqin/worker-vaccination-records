@@ -4,7 +4,7 @@ https://workers-vaccination-record.herokuapp.com/
 
 ## Introduction
 
-This app was created to ensure ease of record keeping by company to monitor their workers for the vaccination status
+This app was created to ensure ease of record keeping by company to monitor workers vaccination status
 
 
 ## Tech Stacks
